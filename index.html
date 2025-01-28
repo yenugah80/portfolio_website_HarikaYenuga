@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harika Yenuga's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3d173;
+      color: #0c0a64;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #112c6e;
+      color: rgb(252, 209, 209);
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    header .logo p {
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      margin-right: 30px;
+    }
+
+    header nav ul li {
+      margin-left: 30px;
+      position: relative;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: rgb(238, 194, 194);
+      font-size: 1.1rem;
+      padding: 10px;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #85f197;
+    }
+
+    header nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #f88322;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header nav ul li a:hover::after {
+      transform: scaleX(1);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #820bb9;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+/* Section Styling */
+#about {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f0e32f;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for profile image and title */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Global Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body Font */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+
+
+/* Section Styling */
+#about {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for profile image and title */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Profile container */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.section-title:hover {
+  color: #2980b9;
+  transform: scale(1.05);
+}
+
+.section-title:focus {
+  outline: none;
+}
+
+/* About Content Styling */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ebe9f7;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(248, 245, 245, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  padding: 20px;
+}
+
+/* About Me Section */
+.about-me-section {
+  margin-bottom: 20px;
+}
+
+.about-heading {
+  font-size: 1.75rem;
+  color: #34495e;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  color: #555;
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.highlight-link {
+  color: #2980b9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+/* Button Styling */
+.cta-button {
+  padding: 10px 20px;
+  background-color: #2980b9;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+.cta-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media Queries for Responsive Layouts */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .card {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+}
+/* Global Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Experience Section Styling */
+#experience {
+  padding: 60px;
+  background-color: #85b5e6; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: none; /* Removed heavy shadows */
+  opacity: 0; /* Start with the section invisible */
+  animation: fadeInSection 1s ease-out forwards; /* Section fades in when scrolled into view */
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+#experience h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #123252; /* Darker color for the header */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7); /* Glowing effect */
+  animation: glowingText 1.5s infinite alternate; /* Animated glow effect on text */
+}
+
+/* Experience Content Layout */
+.experience-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Job Card Styling */
+.job-card {
+  background-color: #ebc4c4; /* White background for cards */
+  border-radius: 8px;
+  width: 800px;
+  padding: 20px;
+  opacity: 0; /* Start with job cards invisible */
+  transform: translateY(20px); /* Start below the normal position */
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out, background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5), 0 0 25px rgba(255, 165, 0, 0.3); /* Default glow */
+}
+
+.job-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Floating effect with slight scale */
+  background-color: #87b1cf; /* Light blue background on hover */
+  opacity: 1;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 35px rgba(0, 255, 255, 0.8); /* Glowing effect on hover */
+}
+
+/* Achievements Section */
+.achievements {
+  margin-top: 20px;
+}
+
+.achievement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  opacity: 0; /* Start with achievements invisible */
+  animation: fadeInUp 0.8s ease-out forwards; /* Achievement fade-in animation */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.achievement p {
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.achievement strong {
+  font-weight: bold;
+}
+
+/* Job Card Animation (fade in and slide up) */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing Text Animation */
+@keyframes glowingText {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+  }
+}
+
+/* Section Fade-In Effect */
+@keyframes fadeInSection {
+  to {
+    opacity: 1; /* Fade in section */
+  }
+}
+
+/* Odd and Even Job Cards with light colors */
+.job-card:nth-child(odd) {
+  background-color: #f9f9f9; /* Light gray for odd jobs */
+}
+
+.job-card:nth-child(even) {
+  background-color: #fafafa; /* Slightly different light gray for even jobs */
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  #experience {
+    padding: 40px 20px;
+  }
+
+  .experience-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .job-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #experience h2 {
+    font-size: 2rem;
+  }
+
+  .job-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .job-header h3 {
+    font-size: 1.6rem;
+  }
+
+  .achievement p {
+    font-size: 0.9rem;
+  }
+}
+
+  /* Career Highlights Section */
+  #career-highlights {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    margin: 50px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  #career-highlights h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Highlights Container */
+  .highlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  /* Highlight Card */
+  .highlight-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    width: calc(45% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Alternating Background Colors */
+  .highlight-card:nth-child(odd) {
+    background-color: #e9f7fe;
+  }
+  
+  .highlight-card:nth-child(even) {
+    background-color: #fdf7e9;
+  }
+  
+  /* Hover Effects */
+  .highlight-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Card Title */
+  .highlight-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Icons */
+  .icon {
+    font-size: 1.5em;
+    color: #2980b9;
+  }
+  
+  /* Subheading in Card */
+  .highlight-card h4 {
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-weight: 600;
+  }
+  
+  /* List Styling */
+  .highlight-card ul {
+    padding-left: 20px;
+  }
+  
+  .highlight-card ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #2c3e50;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 800px) {
+    .highlight-card {
+      width: 100%;
+    }
+  
+    #career-highlights h2 {
+      font-size: 2em;
+    }
+  
+    .highlight-card h3 {
+      font-size: 1.4em;
+    }
+  
+    .highlight-card h4 {
+      font-size: 1em;
+    }
+  }
+    </style>
+  <!-- Add Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<!-- Optional CSS for hover effect -->
+<style>
+    .skill-box {
+        position: relative;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .skill-box i {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: rgb(89, 79, 228);
+    }
+
+    .skill-box:hover {
+        transform: scale(1.05);
+    }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .skills-container .skill-box {
+        width: 22%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .skill-box h3 {
+        font-size: 1.2rem;
+        color: white;
+        margin: 10px 0;
+    }
+
+    .skill-box ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .skill-box ul li {
+        color: rgb(12, 0, 0);
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    
+
+    form input:focus, form textarea:focus {
+      border-color: #f3c984;
+    }
+
+    form button {
+      padding: 12px 20px;
+      background-color: #6283d4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    form button:hover {
+      background-color: #f39c12;
+      transform: translateY(-3px);
+    }
+
+    .socials a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2e3a59;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #f39c12;
+    }
+
+    footer {
+      background-color: #2e3a59;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    
+    footer p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Welcome to My Portfolio Tech Savys!!!!</h1>
+      <p style="text-align: center;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#career-highlights">Career Highlights</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="about">
+    <!-- Profile Image -->
+    <img src="profile.jpg" alt="Harika Yenuga" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+    
+    <h2>Ready to Know Me?</h2>
+    <div class="about-content">
+      <!-- About Me Description -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-front">
+            <div class="about-me-section">
+              <h3>😎 Who Am I?</h3>
+              <p style="text-align: justify;">
+                Hey! I’m <strong>Harika</strong>—a <strong>Data Analyst</strong> and <strong>Business Analyst</strong> on a mission to transform messy data into clear, actionable insights that fuel smarter business decisions. Armed with a <strong>Master’s in Business Analytics</strong> from <strong>Northwood University</strong> (3.87 GPA, but who's counting? 😉), I’ve spent my career diving deep into <strong>AI</strong>, <strong>Machine Learning</strong>, and <strong>data visualization</strong> to make numbers not just speak, but <em>tell a story</em>. 📊✨
+              </p>
+            
+              <p style="text-align: justify;">
+                Beyond crunching numbers, I bridge the gap between <strong>business needs</strong> and <strong>data-driven solutions</strong>, ensuring every decision is powered by real, impactful insights. Whether it’s building <strong>stunning dashboards</strong>, automating <strong>reports</strong>, or presenting complex findings in a way that makes sense—my goal is simple: turning data into your competitive edge. 🚀
+              </p>
+            
+              <p style="text-align: justify;">
+                Oh, and did I mention? My work is being featured at <a href="https://www.airc.org/" target="_blank"><strong>IEEE AIRC 2025</strong></a> and <a href="https://www.fredonia.edu/academics/colleges-schools/school-business/iba-conference" target="_blank"><strong>IBAC 2025</strong></a>. 🏆 Recognizing potential is my thing—let’s see how we can leverage <strong>your</strong> data!
+              </p>
+            
+              <p style="text-align: justify;">
+                If you’re looking for someone who mixes <strong>data expertise</strong> with a strategic, business-first mindset—<strong>I’m your person</strong>. Let’s make your data work harder and smarter, together. 💡
+              </p>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+   <section id="experience" class="bg-gray-100 py-10">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-6">🚀MY EXPERIENCE</h2>
+      <p class="text-3xl text-gray-600 text-center mb-4">
+        A journey of crunching numbers, automating workflows, and making data dance! 
+        Here’s how I’ve left a mark in the data world, one project at a time.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="experience-card transform hover:-translate-y-2 transition duration-300 shadow-lg rounded-xl bg-white p-6">
+          <i class="fas fa-briefcase text-blue-500 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800">Tata Consultancy Services</h3>
+          <h4 class="text-lg text-gray-500">Senior Data Analyst (Feb 2022 – Jan 2024)</h4>
+          <ul class="mt-4 text-left text-gray-600">
+            <li>🚦 Optimized banking workflows to streamline operations.</li>
+            <li>🔍 Conducted user acceptance testing (UAT) with JIRA and HP ALM.</li>
+            <li>📊 Designed insightful Power BI dashboards with actionable insights.</li>
+            <li>🤝 Provided hands-on training to boost tool adoption.</li>
+          </ul>
+        </div>
+        <!-- Card 2 -->
+        <div class="experience-card transform hover:-translate-y-2 transition duration-300 shadow-lg rounded-xl bg-white p-6">
+          <i class="fas fa-apple-alt text-green-500 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800">Infosys BPM Pvt Ltd</h3>
+          <h4 class="text-lg text-gray-500">Business Analyst (Sep 2019 – Feb 2022)</h4>
+          <ul class="mt-4 text-left text-gray-600">
+            <li>🌍 Served as a geospatial guru, cutting mapping errors by 40%.</li>
+            <li>🛠️ Automated workflows using Python to save time and effort.</li>
+            <li>📊 Built Tableau dashboards that wowed stakeholders.</li>
+            <li>👨‍💻 Managed a 19-member team with stellar results.</li>
+          </ul>
+        </div>
+        <!-- Card 3 -->
+        <div class="experience-card transform hover:-translate-y-2 transition duration-300 shadow-lg rounded-xl bg-white p-6">
+          <i class="fas fa-globe text-indigo-500 text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800">RSI Softech</h3>
+          <h4 class="text-lg text-gray-500">GIS Engineer (Jan 2019 – Sep 2019)</h4>
+          <ul class="mt-4 text-left text-gray-600">
+            <li>🛰️ Analyzed satellite imagery for better disaster response.</li>
+            <li>📂 Designed geodatabases for faster data retrieval.</li>
+            <li>🤖 Automated workflows to cut manual work by 30%.</li>
+            <li>🏗️ Supported urban planning and national projects.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>  
+<style>
+  #experience p {
+    color: #333; /* Darker text for better contrast */
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  #experience {
+    background-color: #f8f9fa; /* Light gray background for a clean, professional feel */
+    padding: 3rem 1rem;
+  }
+
+  .experience-card {
+    background-color: #ffffff; /* White background for cards to keep things clean and simple */
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for subtle depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #e0e0e0; /* Light border for definition */
+  }
+
+  .experience-card:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+
+  .experience-card i {
+    display: block;
+    margin: 0 auto 1rem;
+    font-size: 3rem;
+    color: #007bff; /* Soft blue icon color for consistency */
+  }
+
+  .experience-card h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #333; /* Dark text for headings */
+  }
+
+  .experience-card h4 {
+    font-size: 1rem;
+    color: #6c757d; /* Soft gray color for subheadings */
+    margin-bottom: 1rem;
+  }
+
+  .experience-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .experience-card ul li {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: #495057; /* Neutral dark gray for list items */
+  }
+
+  @media (max-width: 768px) {
+    .experience-card ul li {
+      font-size: 0.85rem; /* Slightly smaller text on smaller screens */
+    }
+
+    #experience {
+      padding: 2rem 1rem; /* Reduce padding on smaller screens */
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    }
+  }
+</style>
+<section id="career-highlights" style="padding: 2rem; background-color: #f4f7fb;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: #333;">CAREER HIGHLIGHTS</h2>
+  <p style="text-align: center; font-size: 1rem; color: #555; margin-bottom: 2rem;">
+    "Welcome to the highlight reel of my career! 🚀 Where data isn’t just numbers—it’s a powerhouse of insights, predictions, and solutions (and sometimes, a bit of magic)."
+  </p>
+  
+  <div class="highlights-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+    <!-- Highlight Card 1 -->
+    <div class="highlight-card" style="flex: 1 1 calc(100% - 1rem); max-width: 450px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition: transform 0.3s ease; cursor: pointer;" onclick="window.location.href='#'">
+      <h3 style="font-size: 1.5rem; color: #003366; font-weight: 600;">
+        <span style="font-size: 1.8rem; margin-right: 0.5rem;">🎓</span>
+        Optimizing Recruitment with Machine Learning
+      </h3>
+      <p style="text-align: justify; font-size: 1rem; line-height: 1.5; color: #444;">
+        This research paper, to be presented at <strong>IEEE AIRC 2025</strong>, explores how machine learning (ML) can enhance recruitment processes by predicting the best-fit candidates.
+      </p>
+      
+      <div>
+        <h4 style="font-size: 1.1rem; color: #333; font-weight: 600; margin-bottom: 0.5rem;">🔍 Research Approach:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 1rem; color: #555; line-height: 1.6;">
+          <li>🤖 <strong>ML Models:</strong> Using models like <em>Random Forest</em> and <em>CatBoost</em> to predict top candidates.</li>
+          <li>🔧 <strong>Feature Engineering:</strong> Creating relevant features to improve model accuracy.</li>
+          <li>⚙️ <strong>Hyperparameter Tuning:</strong> Fine-tuning models using grid and random search methods.</li>
+          <li>🔍 <strong>Model Validation:</strong> Cross-validation to ensure model reliability.</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 style="font-size: 1.1rem; color: #333; font-weight: 600; margin-bottom: 0.5rem;">✨ Expected Results:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 1rem; color: #555; line-height: 1.6;">
+          <li>📈 <strong>High Prediction Accuracy:</strong> Aim for 96%+ accuracy in candidate matching.</li>
+          <li>⏱️ <strong>Faster Hiring:</strong> Streamline the recruitment process.</li>
+          <li>💰 <strong>Cost Efficiency:</strong> Reduce recruitment costs and re-interviews.</li>
+        </ul>
+      </div>
+      
+      <p style="font-size: 0.9rem; color: #777; font-style: italic;">
+        Why it matters: This research aims to modernize recruitment, offering organizations a data-driven approach to better, faster hiring decisions.
+      </p>
+    </div>
+
+    <!-- Highlight Card 2 -->
+    <div class="highlight-card" style="flex: 1 1 calc(100% - 1rem); max-width: 450px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition: transform 0.3s ease; cursor: pointer;" onclick="window.location.href='#'">
+      <h3 style="font-size: 1.5rem; color: #003366; font-weight: 600;">
+        <span style="font-size: 1.8rem; margin-right: 0.5rem;">🤖</span>
+        Revolutionizing Recruitment: Bias Mitigation & Efficiency
+      </h3>
+      
+      <p style="text-align: justify; font-size: 1rem; color: #444;">
+        Selected for <strong>IBAC 2025 Conference</strong>, this project focuses on optimizing recruitment by applying machine learning models and fairness-aware algorithms to reduce biases.
+      </p>
+      
+      <div>
+        <h4 style="font-size: 1.1rem; color: #333; font-weight: 600; margin-bottom: 0.5rem;">🔍 Research Approach:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 1rem; color: #555; line-height: 1.6;">
+          <li>🧠 Applied models like <strong>Random Forest</strong>, <strong>SVM</strong>, and <strong>CatBoost</strong> to predict hiring decisions.</li>
+          <li>⚖️ Integrated fairness metrics to reduce biases and promote equitable hiring.</li>
+          <li>💡 Used <strong>SHAP</strong> and <strong>LIME</strong> for explainable AI.</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 style="font-size: 1.1rem; color: #333; font-weight: 600; margin-bottom: 0.5rem;">✨ Results:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 1rem; color: #555; line-height: 1.6;">
+          <li>🏆 Achieved <strong>95% accuracy</strong> with <strong>CatBoost</strong>.</li>
+          <li>💬 Reduced biases through fairness metrics.</li>
+          <li>🔑 Identified key features like <strong>Education Level</strong> and <strong>Personality Score</strong>.</li>
+        </ul>
+      </div>
+      
+      <p style="font-size: 0.9rem; color: #777; font-style: italic;">
+        💡 Why it matters: This project ensures data-driven, transparent, and inclusive hiring decisions.
+      </p>
+    </div>
+
+    <!-- Highlight Card 3 -->
+    <div class="highlight-card" style="flex: 1 1 calc(100% - 1rem); max-width: 400px; background-color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+      <h3 style="font-size: 1.2rem; color: #003366; font-weight: 600;">
+        <span style="font-size: 1.5rem; margin-right: 0.5rem;">📦</span>
+        Enhancing Operational Efficiency: Inventory Management
+      </h3>
+      <p style="text-align: justify; font-size: 1rem; color: #444;">
+        This project uses machine learning and time series forecasting to optimize inventory management, reducing costs and improving customer satisfaction.
+      </p>
+      <div>
+        <h4 style="font-size: 1rem; color: #333;">🔍 Approach:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 0.95rem; color: #555;">
+          <li>✅ Applied SARIMA, Gradient Boosting, and XGBoost for forecasting.</li>
+          <li>✅ Used hyperparameter tuning for optimization.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size: 1rem; color: #333;">✨ Results:</h4>
+        <ul style="list-style: none; padding: 0; font-size: 0.95rem; color: #555;">
+          <li>🚀 Identified SARIMA as the best model for accuracy.</li>
+          <li>🚀 Optimized inventory by integrating Economic Order Quantity.</li>
+        </ul>
+      </div>
+      <p style="font-size: 0.9rem; color: #0c0133;">
+        Why it matters: This project demonstrates how machine learning can improve inventory management and supply chain efficiency.
+      </p>
+    </div>
+  </div>      
+  
+  <style>
+    @media only screen and (max-width: 768px) {
+      .highlight-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+      .highlight-card p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</section>
+<section>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      /* General Styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+  
+      h1, h2 {
+        text-align: center;
+        margin: 20px 0;
+      }
+  
+      /* Section Styling */
+      #skills {
+        padding: 40px;
+        background-color: #fff;
+      }
+  
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+  
+      /* Skill Box Styling */
+      .skill-box {
+        background: linear-gradient(135deg, #9eaaf1, #afb7e2);
+        color: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+      .skill-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      .skill-icon {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+  
+      .skill-box h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+  
+      .skill-box ul {
+        list-style: none;
+        padding: 0;
+        font-size: 16px;
+      }
+  
+      .skill-box ul li {
+        margin: 5px 0;
+      }
+  
+      .skill-box ul li i {
+        margin-right: 8px;
+      }
+  
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .skill-box {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="skills">
+      <section style="padding: 20px; text-align: center;">
+        <h2 id="interactive-heading" style="cursor: pointer; margin-bottom: 20px;"></h2>
+        
+      <div class="skills-container">
+        <!-- Business Intelligence -->
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Business Intelligence</h3>
+          <ul>
+            <li><i class="fab fa-microsoft"></i> Power BI</li>
+            <li><i class="fas fa-table"></i> Tableau</li>
+            <li><i class="fas fa-cogs"></i> Microsoft Power Automate</li>
+            <li><i class="fas fa-chart-pie"></i> Data Visualization</li>
+          </ul>
+        </div>
+  
+        <!-- Data Analysis & Visualization -->
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Data Analysis & Visualization</h3>
+          <ul>
+            <li><i class="fas fa-database"></i> SQL</li>
+            <li><i class="fab fa-python"></i> Python (Pandas, Matplotlib)</li>
+            <li><i class="fas fa-chart-bar"></i> Excel (Pivot Tables)</li>
+          </ul>
+        </div>
+  
+        <!-- Data Governance -->
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fas fa-lock"></i></div>
+          <h3>Data Governance</h3>
+          <ul>
+            <li><i class="fas fa-university"></i> GDPR Compliance</li>
+            <li><i class="fas fa-archive"></i> Master Data Management</li>
+            <li><i class="fas fa-cogs"></i> Data Quality Assurance</li>
+          </ul>
+        </div>
+  
+        <!-- Databases -->
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h3>Databases</h3>
+          <ul>
+            <li><i class="fas fa-server"></i> SQL Server</li>
+            <li><i class="fas fa-database"></i> MySQL</li>
+            <li><i class="fas fa-database"></i> PostgreSQL</li>
+          </ul>
+        </div>
+  
+        <!-- ETL -->
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fas fa-plug"></i></div>
+          <h3>ETL</h3>
+          <ul>
+            <li><i class="fas fa-vial"></i> SOAP UI</li>
+            <li><i class="fas fa-check-circle"></i> Postman</li>
+            <li><i class="fas fa-cogs"></i> Talend</li>
+          </ul>
+        </div>
+  
+        <!-- GIS Tools -->
+        <div class="skill-box">
+          <div class="skill-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3>GIS Tools</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> ArcGIS</li>
+            <li><i class="fas fa-map"></i> QGIS</li>
+            <li><i class="fas fa-tasks"></i> GeoPandas</li>
+          </ul>
+        </div>
+        <style>
+          #skills {
+  padding: 60px 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.skill {
+  margin: 20px 0;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 0;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 10px;
+  transition: width 2s ease-out;
+}
+
+.skill:nth-child(odd) .progress-bar {
+  background-color: #e74c3c;
+}
+
+.skill:nth-child(even) .progress-bar {
+  background-color: #2ecc71;
+}
+</style>
+<script>
+// Intersection Observer to trigger animation when skills come into view
+const skills = document.querySelectorAll('.progress-bar');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const progress = entry.target;
+      progress.style.width = progress.getAttribute('data-progress') + '%';
+    }
+  });
+}, { threshold: 0.5 });
+
+skills.forEach(skill => observer.observe(skill));
+</script>
+        </style>
+      </section>
+      <section id="skills">
+        <style>
+          /* General Styles */
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #feca57);
+            color: #333;
+          }
+  
+          h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+          }                   
+
+          /* Gradient and Glow Styles */
+          #interactive-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #1dd1a1, #5f27cd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: gradientAnimation 3s linear infinite;
+            transition: text-shadow 0.3s ease, transform 0.3s ease;
+          }
+        
+          #interactive-heading:hover {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            transform: scale(1.05);
+          }
+        
+          /* Gradient Animation */
+          @keyframes gradientAnimation {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+        
+          /* Skills Section Styling */
+          #cards-container {
+            height: 400px; /* Adjust as needed for the height of your skills section */
+            overflow-y: auto; /* Enables vertical scrolling */
+            padding: 20px;
+            margin-top: 50px;
+          }
+        
+          /* Optional styles for skill-boxes */
+          .skill-box {
+            /* Your custom styles here */
+          }
+        </style>
+        
+        <script>
+          // Dynamic Typing Effect
+          const headingText = "Explore My Skills Below! ⬇️";
+          const headingElement = document.getElementById("interactive-heading");
+          let i = 0;
+        
+          function typeEffect() {
+            if (i < headingText.length) {
+              headingElement.innerHTML += headingText.charAt(i);
+              i++;
+              setTimeout(typeEffect, 100); // Adjust speed here
+            }
+          }
+        
+          // Smooth Scroll to Cards
+          headingElement.addEventListener("click", () => {
+            document.getElementById("cards-container").scrollIntoView({ behavior: "smooth" });
+          });
+        
+          // Start Typing Effect
+          typeEffect();
+        
+          // Auto Scroll Functionality for Skills Section
+          function autoScroll() {
+            const skillsSection = document.getElementById("cards-container");
+        
+            // Check if there is content to scroll
+            if (skillsSection.scrollHeight > skillsSection.clientHeight) {
+              // Scroll the skills section by 1px vertically
+              skillsSection.scrollBy(0, 1); 
+        
+              // Continue auto-scrolling at a set interval
+              setTimeout(autoScroll, 10); // Adjust the delay for smooth scrolling speed
+            }
+          }
+        
+          // Start auto-scrolling for skills section when the page loads
+          window.onload = () => {
+            autoScroll(); // Start auto-scrolling for the skills section
+          };
+        
+          // Optional: Add cursor interaction
+          document.querySelectorAll('.skill-box').forEach(box => {
+            box.addEventListener('mouseover', () => {
+              box.style.cursor = 'pointer';
+            });
+          });
+          
+        </script>
+        
+  </section>
+<section>
+    <!-- Certifications Section -->     
+    <h2>My Certifications</h2>
+        <section id="certifications" style="padding: 50px; background: linear-gradient(80deg, #09011a);">
+    <div class="Certifications-content">
+    <h4 class="text-center text-3xl font-extrabold text-gray-900 mb-8">
+      🎓 **Certification Overload: One Learner, Too Many Courses!** 🚀 I’m the proud owner of an ever-growing collection of certifications — from Data Analytics to Machine Learning, from SQL mastery to Python wizardry. 📚✨ It's safe to say I’ve been on a non-stop learning spree, constantly adding new skills and tools to my arsenal like a data-driven superhero building their ultimate toolkit! 🦸‍♀️💻
+
+      There are so many certifications here, you might want to grab a snack and settle in — it's a journey through the many courses and knowledge I’ve picked up along the way. Ready? Let’s dive into my education adventure! 🌟
+    </h4>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Certification Card</title>
+    <style>
+        /* Container to center the certification card */
+        .cert-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        /* Styling for the certification card */
+        .meta-cert-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .meta-cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .meta-cert-card img {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .meta-cert-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .meta-cert-card h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .meta-cert-card:hover h2 {
+            color: #007BFF;
+        }
+
+        .meta-cert-card p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .meta-cert-card:hover p {
+            color: #555;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            .meta-cert-card {
+                padding: 20px;
+            }
+
+            .meta-cert-card h2 {
+                font-size: 1.6rem;
+            }
+
+            .meta-cert-card p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 12px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .meta-cert-card {
+                padding: 15px;
+            }
+
+            .meta-cert-card h2 {
+                font-size: 1.3rem;
+            }
+
+            .meta-cert-card p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Certification Card Container -->
+    <div class="cert-card-container">
+        <div class="meta-cert-card">
+            <div>
+                <img src="https://res.cloudinary.com/dzouosbkb/image/upload/v1738041036/ffbh7ga5bxurrjhz6c8u.png" alt="Meta Logo" />
+            </div>
+            <h2>Meta Data Analyst Certification</h2>
+            <p>
+                I am proud to share that I’ve earned the **Meta Data Analyst Certification** from Coursera! This certification covers advanced data analysis techniques and provides valuable insights for effective data management.
+            </p>
+            <a href="https://coursera.org/share/b44a7f4f5bd1ef80b498c6d2a5273366" target="_blank" class="btn">View Certification</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for handling smooth link opening
+        const btn = document.querySelector('.btn');
+        
+        btn.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.open(btn.getAttribute('href'), '_blank');
+        });
+    </script>
+
+</body>
+</html>
+
+    <div class="Certifications-container">
+      <section id="datacamp-certifications" style="padding: 50px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; font-size: 2.5rem; color: #4a4a4a;">DataCamp Certifications</h2>
+        <div class="cert-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+            <!-- Certification Cards -->
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Introduction to R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/6d0802b3a1efef6af0bfb59cc81baddbc21a8694?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Intermediate R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/7b9e9b2d56847fd8c29cc373a0edc93b252d0c34?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Introduction to Statistics in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/4df3518ee22ab6a062685b3a1518741d664aa986?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Introduction to Regression in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/6931b4fe812b55321ca765a2f43a1c7fc06c46fd?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Intermediate Regression in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/be5dea98e344947ded8486b6607c3f4d558e7667?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Manipulating Time Series Data in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/54b19481db3ed499550456930dfe58316f7ea34e?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Working with Dates and Times in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/f2acc19bd4d0d66c09448aacda56d86c0f974202?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Time Series Analysis in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/6cae0b14f446489b0502cc34a350875c281dd228?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Intermediate R for Finance</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/9a3fc0b2866cd084098c043a783b87aef7c1e99e?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">Forecasting in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/f6235b3d5b4352cd60beae2a2c808515afd6c67b?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+            <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h4 style="font-size: 1.2rem; color: #333;">ARIMA Models in R</h4>
+                <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/6e35c19c1d5cb6868a1d0ecde62c43412571fbda?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+            </div>
+        <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <h4 style="font-size: 1.2rem; color: #333;">Generalized Linear Models in R</h4>
+          <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/cd7cf28dd4c6bc654c0fe8d4e7f78f7d0f1063ea?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+        </div>     
+        <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <h4 style="font-size: 1.2rem; color: #333;">GARCH Models in R</h4>
+          <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/917039eaeaa839893c089e981e1071c235e8d76b?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+        </div>
+        
+        <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+          <h4 style="font-size: 1.2rem; color: #333;">Visualizing Time Series Data in R</h4>
+          <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/61f7b75e07847c61e40794b3fba8e3a9c77be09f?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+        </div>
+          <div class="cert-card" style="background: #eef2f7; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h4 style="font-size: 1.2rem; color: #333;">Case Study: Analyzing City Time Series Data</h4>
+            <p><a href="https://www.datacamp.com/statement-of-accomplishment/course/ea86550849d0672a0e05502a0ba1e9de297ed344?raw=1" target="_blank" style="color: #007BFF; text-decoration: none; font-weight: 600;">View Certificate</a></p>
+          </div>
+        </div>
+        </section>
+
+        <section id="linkedin-certifications" style="padding: 50px; background-color: #fdfcf2;">
+          <h2 style="text-align: center; font-size: 2.5rem; color: #4a4a4a;">LinkedIn Certifications</h2>
+          <div class="cert-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;"> 
+
+<!-- Category: Machine Learning & Python -->
+<div class="cert-category-title" style="grid-column: span 2; text-align: center; font-size: 1.8rem; font-weight: bold; color: #11011a; margin: 30px 0 20px;">
+    Machine Learning & Python
+  </div>
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Hands-On Introduction: Python</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="Certifications/LinkedIn/CertificateOfCompletion_HandsOn Introduction Python.pdf" target="_blank" style="color: #010d1a; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Machine Learning with Scikit-Learn</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/c0f0d57656ad35d70577ed6ee8eb7409d942f09bfd9fb959d6ed729e998d9b18?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div> 
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">pandas Essential Training</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/6b40c163c694b0270a4a12de7e606db0889321c4b77172a06d3c430f7a722f96?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div> 
+
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Python for Data Science and Machine Learning Essential Training Part 2</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/6dbd2ae10191f08514269f5a94725a0305798e410077225958116db856f61db6?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Python for Data Science and Machine Learning Essential Training Part 1</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/8cb581d782dc74ce7d74b4a9fc5c455a005e78d3afcbfd29b8d243b9a867398e?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Data Science Foundations: Data Mining in Python</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/885ce515c6108d75d6b43acca8c001509915a101be321cd576bb46f31d73e887?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Machine Learning Fundamentals for Healthcare</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/81a68f1cfa787ad3ea2a5d322e37643e11a41504f94b68413f5c2f82f569aaa4?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Hands-On Introduction: Python</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/c9401e01881f7607f3965f8483e3121a0e00091ca5097d3627092032273ea575?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Learning Digital Business Analysis</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/06e71c67da8b5d30428d15042b12125ab8ac35f90a0a25de9b97c93eae8a5b2f?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+   
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Supervised Learning Essential Training</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/81e7093950faa115373fa5e4afd75fe6f02221d7c1e1a1aa7e33eb3080ef1d82?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Machine Learning with Python: k-Means Clustering</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/965f21112d83f7172fc791047102b76027c745835bcc8dfb3db03e72f3af2f31?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Machine Learning with Python: Logistic Regression</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/1a5d2c02a07eab63ef5b9e8c1546740409eb3ebe811ba9493d0d43c73839035d?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Machine Learning with Python: Decision Trees</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/c99abdd8fbbe3033be4f1bef522361c945ae753488427d4e843c85d79535c7b0?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Machine Learning with Python: Foundations</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/32acb604756491f4cdea4cf42c63df41be38f4bf6f3f6e964508907fe0c2e97f?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Academic Research Foundations: Quantitative</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/ae83eb51031f3f4acfb1de490e6537f968cb97aa237c25d44b5bbc0b76d40226?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  <div class="cert-card" style="background: #f3a99c; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Time Series Analysis and Forecasting with GPT-4</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/39eceee8e8d11fe1f8b00f6cde2a8c5334937ba57ce3e73f17911dd9636c396d?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+
+<!-- Category: Business Analysis & Strategy -->
+<div class="cert-category-title">Business Analysis & Strategy</div>
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    
+    <h3 style="font-size: 1.2rem; color: #333;">A Crash Course in Writing Well: Learn to Write with More Style, Flair, and Impact</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/d3a38a13a679c57f5842457cf8c15d8508fb9c535750767d54f7d8c274d7678e?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Mastering Virtual Presentations</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/89c4af21d42408c364fcde961d6a000232f53f2bb3f2251997d2089f204ee327?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analytics: Sales Data</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/12af77532ada0a215a119b5366c7dcfd8eb811bba2c0efe2dd5b7d4e8457ff86?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analysis Foundations: Business Process Modeling</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/77720f1955aaec5a68e137f6648ee35b69fb4d80fe2fd79ea9ebc01a4321e2c4?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analytics Foundations: Descriptive, Exploratory, and Explanatory Analytics</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/e02fb0b05c917679b96c1efd8fc5a9f9bca74909040e71d8e393da909394d172?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analytics: Marketing Data</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/d350e8e756d295d15bae732a6354c06d30f0c21bb2f428717be303b200f5e840?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Requirements Elicitation and Analysis</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/61d7c73294e2d4ecb11e9395055e2974c60f0b9e035df9730aff00979ea0c771?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Requirements Elicitation for Business Analysts: Interviews</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/4392222237bce9ed65c8fa05fc98840c59c2e0fa55509b94e744b490f754268d?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analysis for Project Managers</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/aa9638eeada80a5755713c855599ead6947109df77f7995cbd55c65627eeeb8d?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analyst and Project Manager Collaboration</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/0a607c7214479ae36e9611ff6280a6cdf85f2c1dd8be7bda3384aad9a8da0204?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analysis for Busy Professionals</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/9fbebd2cafe0488439541265c89b280ec96a2117430d87405ce9d8ceccd3ea9f?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Marketing Analytics in Action: Drive Growth and Communication with Data Insights</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/0c03be18ee9b3ee3e9596d69af89cccd52b31dc9647fc5246c34ec12bfde483c?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Data-Driven Decisions in Business Operations</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/018015e25f3d369e63ef6d1f9989e21a059404a8576c2e0f597cfd3480b43e83?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analysis: Essential Tools and Techniques</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/e1a7c856f772af711ca38726165bcb6866d2f7e9f9cf63432248f2cb38fd60b4?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analysis Foundations: Strategy Analysis</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/9a7f344c59abbb0f92be058bde54ec4028231f08777782d8a303cbdf2d3a7ff3?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analysis: Essential Tools and Techniques</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="Certifications/LinkedIn/CertificateOfCompletion_Business Analysis Essential Tools and Techniques.pdf" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analytics Foundations: Predictive, Prescriptive, and Experimental Analytics</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="Certifications/LinkedIn/CertificateOfCompletion_Business Analytics Foundations Predictive Prescriptive and Experimental Analytics.pdf" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analysis Foundations: Business Process Modeling</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/77720f1955aaec5a68e137f6648ee35b69fb4d80fe2fd79ea9ebc01a4321e2c4?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Business Analytics Foundations: Descriptive, Exploratory, and Explanatory Analytics</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/e02fb0b05c917679b96c1efd8fc5a9f9bca74909040e71d8e393da909394d172?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Learning Digital Business Analysis</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/06e71c67da8b5d30428d15042b12125ab8ac35f90a0a25de9b97c93eae8a5b2f?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #cee98f; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Predictive Analytics Essential Training: Estimating and Ensuring ROI</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/f6d62d317fb265de5d23b89dbd56ac76ae0ecfa9e29650b44ec2b5d5088e2d67?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+     <!-- Category: GitHub & Collaboration -->
+     <div class="cert-category-title" style="grid-column: span 2; text-align: center; font-size: 1.8rem; font-weight: bold; color: #11011a; margin: 30px 0 20px;">
+        GitHub & Collaboration
+      </div>
+  <div class="cert-card" style="background: #efbbfc; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Learning GitHub</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="Certifications/LinkedIn/CertificateOfCompletion_Learning GitHub.pdf" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  <div class="cert-card" style="background: #efbbfc; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">GitHub Codespaces for Students</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/70a55e9be6c27d1a7f1124144b412ae55fd17f3c94b93cd1e7cd8dc34ef3e260?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div> 
+  <div class="cert-card" style="background: #efbbfc; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Practical GitHub Project Management and Collaboration</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/670f8adc83f4d9f68b4e793de3c9e0c373a2aff9440baa51f729fd87ba0dfdc5?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #efbbfc; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Practical GitHub Actions</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/00df9301d573959ef931b02aab215dfbad4423e83170f3ad05c5171bcbb5b6d5?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+  
+  <div class="cert-card" style="background: #efbbfc; border-radius: 15px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <h3 style="font-size: 1.2rem; color: #333;">Creating GitHub Portfolios</h3>
+    <p><strong>Issued By:</strong> LinkedIn</p>
+    <p><a href="https://www.linkedin.com/learning/certificates/37e8cf4490574cf7fad11e3a30ad2353648db2925260c1f270fef70dfc7d926b?trk=share_certificate" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Certificate</a></p>
+  </div>
+
+</section>
+<section id="sap-sas-certifications" style="padding: 50px; background-color: #cebfc8;">
+  <h2 class="section-title" style="text-align: center; font-size: 2rem; margin-bottom: 30px; color: #4a4a4a;">SAP and SAS Certifications</h2>
+  <div class="cert-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    <!-- SAP Certifications -->
+    <div class="cert-category" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <div class="category-title" style="font-size: 1.5rem; margin-bottom: 20px; font-weight: bold; color: #010708;">SAP Certifications</div>
+      <div class="cert-card" style="margin-bottom: 20px;">
+        <h3 class="cert-title" style="font-size: 1.2rem; margin-bottom: 10px;">Exploring SAP Datasphere - Record of Achievement</h3>
+        <p><strong>Issued By:</strong> SAP</p>
+        <p><strong>Issued Date:</strong> November 12, 2024</p>
+        <p><a href="https://www.credly.com/badges/23fb36ef-53f0-4e49-9ba1-d727e4eabe04" target="_blank" class="view-badge">View Badge</a></p>
+      </div>
+      <div class="cert-card" style="margin-bottom: 20px;">
+        <h3 class="cert-title" style="font-size: 1.2rem; margin-bottom: 10px;">Exploring SAP Analytics Cloud - Record of Achievement</h3>
+        <p><strong>Issued By:</strong> SAP</p>
+        <p><strong>Issued Date:</strong> November 12, 2024</p>
+        <p><a href="https://www.credly.com/badges/64e37b70-13c2-4859-98a9-68879f4d60b6" target="_blank" class="view-badge">View Badge</a></p>
+      </div>
+    </div>
+
+    <!-- SAS Certifications -->
+    <div class="cert-category" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <div class="category-title" style="font-size: 1.5rem; margin-bottom: 20px; font-weight: bold; color: #042a30;">SAS Certifications</div>
+      <div class="cert-card" style="margin-bottom: 20px;">
+        <h3 class="cert-title" style="font-size: 1.2rem; margin-bottom: 10px;">Interactive Machine Learning in SAS Viya</h3>
+        <p><strong>Issued By:</strong> SAS</p>
+        <p><strong>Issued Date:</strong> October 14, 2024</p>
+        <p><a href="https://www.credly.com/badges/f5c7b0fd-e376-4dcc-bb14-430f4b8e6f37" target="_blank" class="view-badge">View Badge</a></p>
+      </div>
+      <div class="cert-card" style="margin-bottom: 20px;">
+        <h3 class="cert-title" style="font-size: 1.2rem; margin-bottom: 10px;">Machine Learning Using SAS Viya</h3>
+        <p><strong>Issued By:</strong> SAS</p>
+        <p><strong>Issued Date:</strong> October 14, 2024</p>
+        <p><a href="https://www.credly.com/badges/cbffe08c-92df-4af8-b731-3b2a1b0b283b" target="_blank" class="view-badge">View Badge</a></p>
+      </div>
+      <div class="cert-card" style="margin-bottom: 20px;">
+        <h3 class="cert-title" style="font-size: 1.2rem; margin-bottom: 10px;">Statistics 1: Introduction to ANOVA, Regression, and Logistic Regression</h3>
+        <p><strong>Issued By:</strong> SAS</p>
+        <p><strong>Issued Date:</strong> March 3, 2024</p>
+        <p><a href="https://www.credly.com/badges/4f9eb579-44a2-4d81-a32e-4bde9e79de30" target="_blank" class="view-badge">View Badge</a></p>
+      </div>
+      <div class="cert-card" style="margin-bottom: 20px;">
+        <h3 class="cert-title" style="font-size: 1.2rem; margin-bottom: 10px;">SAS Visual Statistics on SAS Viya: Interactive Model Building</h3>
+        <p><strong>Issued By:</strong> SAS</p>
+        <p><strong>Issued Date:</strong> March 3, 2024</p>
+        <p><a href="https://www.credly.com/badges/7e8918b8-ceba-4b55-8771-06127357dee4" target="_blank" class="view-badge">View Badge</a></p>
+      </div>
+      <div class="cert-card" style="margin-bottom: 20px;">
+        <h3 class="cert-title" style="font-size: 1.2rem; margin-bottom: 10px;">SAS Visual Analytics 1 for SAS Viya: Basics</h3>
+        <p><strong>Issued By:</strong> SAS</p>
+        <p><strong>Issued Date:</strong> February 14, 2024</p>
+        <p><a href="https://www.credly.com/badges/25cfcbc4-a1e3-4b0d-9038-0c5eda9f3ad6" target="_blank" class="view-badge">View Badge</a></p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* General Styling for all Certification Sections */
+    .cert-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .cert-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+    }
+
+    /* Hover Effect for Cards */
+    .cert-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.05);
+        background-color: #f8f9fa;
+    }
+
+    /* Hover Effect for Image inside the card */
+    .cert-card img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .cert-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .cert-card h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .cert-card p {
+        margin: 10px 0;
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .cert-card a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 15px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Hover Effect for Links */
+    .cert-card a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+        transform: translateY(-3px);
+    }
+
+    /* Section Titles */
+    .cert-category-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin: 30px 0 20px;
+    }
+
+    /* Specific Section Styling */
+    #datacamp-certifications {
+        background-color: #eef2f7;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    #datacamp-certifications h4 {
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    #sap-sas-certifications {
+        background-color: #f7f7f7;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    #sap-sas-certifications .view-badge {
+        color: #007b8f;
+        text-decoration: none;
+        border: 2px solid #007b8f;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    #sap-sas-certifications .view-badge:hover {
+        color: white;
+        background-color: #007b8f;
+        box-shadow: 0 4px 10px rgba(0, 123, 139, 0.3);
+        transform: translateY(-3px);
+    }
+
+    #linkedin-certifications {
+        background-color: #8183ee;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    #linkedin-certifications h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #4a4a4a;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .cert-container {
+            grid-template-columns: 1fr;
+        }
+
+        #sap-sas-certifications,
+        #datacamp-certifications,
+        #linkedin-certifications {
+            padding: 20px;
+        }
+
+        .cert-category-title,
+        #linkedin-certifications h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Responsive Design for Certification Cards */
+    @media (max-width: 480px) {
+        .cert-card {
+            padding: 15px;
+        }
+
+        .cert-card h3 {
+            font-size: 1.3rem;
+        }
+
+        .cert-card p {
+            font-size: 1rem;
+        }
+
+        .cert-card a {
+            font-size: 1rem;
+        }
+
+        .cert-category-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+</section>
+<section>
+  <!-- Footer Section -->
+  <footer id="contact" class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white py-16">
+    <div class="container mx-auto text-center px-6 lg:px-16">
+      <!-- Call-to-Action -->
+      <h2 class="text-4xl font-extrabold mb-6">
+        Let’s Collaborate!
+      </h2>
+      <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+        Got a project, an opportunity, or just want to chat? I’m eager to connect and collaborate. Let’s work together to craft innovative, data-driven solutions that drive real results. Reach out, and let's get started
+      </p>
+
+      <!-- Buttons for Hiring Managers -->
+      <div class="flex justify-center gap-6 flex-wrap mb-10">
+        <a href="mailto:harika20y@gmail.com" 
+           class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all shadow-sm hover:shadow-md">
+          ✉️ Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/harika-ye" target="_blank" 
+           class="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full transition-all shadow-sm hover:shadow-md">
+          🔗 Connect on LinkedIn
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="socials flex justify-center space-x-6 text-2xl mb-6">
+        <a href="https://github.com/yenugah80" target="_blank" class="hover:text-gray-300 hover:scale-110 transition-transform">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/harika-ye" target="_blank" class="hover:text-gray-300 hover:scale-110 transition-transform">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/h.a.r.i.k.aa" target="_blank" class="hover:text-gray-300 hover:scale-110 transition-transform">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:harika20y@gmail.com" class="hover:text-gray-300 hover:scale-110 transition-transform">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Final Note -->
+      <p class="text-sm text-gray-400 mt-4">
+        &copy; 2025 Harika Yenuga. All Rights Reserved. | 
+        <span class="font-semibold">Let’s turn your data into actionable insights!</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+    ↑
+  </button>
+
+  <!-- Floating Contact Button -->
+  <a href="mailto:harika20y@gmail.com" id="contactBtn" class="contact-btn" aria-label="Contact Me">
+    📧
+  </a>
+</section>
+
+<!-- Font Awesome CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<style>
+  /* General button styling */
+  a {
+    text-decoration: none;
+  }
+
+  /* Scroll-to-Top Button */
+  .scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .scroll-to-top-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+
+  /* Floating Contact Button */
+  .contact-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Social Icons Hover Effects */
+  .socials {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .social-icon {
+    color: #333;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #00c853; /* Hover color */
+    transform: scale(1.15); /* Slight enlargement */
+  }
+
+  .social-icon i {
+    vertical-align: middle;
+  }
+
+  /* Footer Section Styling */
+  footer {
+    background: linear-gradient(to bottom, #1f2937, #111827, #1f2937);
+  }
+
+  .socials a {
+    color: inherit;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    .socials {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .socials a {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+
+<!-- JavaScript for Scroll-to-Top Button -->
+<script>
+  window.onscroll = function() {
+    var button = document.getElementById("scrollToTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  };
+
+  document.getElementById("scrollToTopBtn").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+</script>
+
+</body>
+</html>
